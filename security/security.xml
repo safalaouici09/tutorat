@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <record model="ir.module.category" id="module_category_tutorat">
+        <field name="name">Tutorat</field> 
+        <field name="description">Tutorat</field> 
+        <field name="sequence">8</field> 
+    </record>
+
+    
+    <!--  RespoDE  -->
+    
+    <record id="group_respode" model="res.groups">
+        <field name="name">respoDE</field>
+        <field name="category_id" ref="module_category_tutorat"/>
+    </record>
+
+    <!--  Etudiant  -->
+
+    <record id="group_etudiant" model="res.groups">
+        <field name="name">Etudiant</field>
+        <field name="category_id" ref="module_category_tutorat"/>
+    </record>
+
+    <!--  Enseignant  -->
+    
+    <record id="group_enseignant" model="res.groups">
+        <field name="name">Enseignant</field>
+        <field name="category_id" ref="module_category_tutorat"/>
+    </record>
+
+
+       <!-- <record model="ir.rule" id="vois_demandes">
+        <field name="name">voir_ses_propres_demandes</field>
+        <field name="model_id" ref="model_tutorat_demande"/>
+         <field name="domain_force">[('user_id',=,user.id)]</field>
+          <field name="groups" eval="[(4,ref('group_etudiant'))]"/>
+             <field name="perm_read" eval="1"/>
+           <field name="perm_write" eval="1"/>
+   <field name="perm_create" eval="1"/>
+   <field name="perm_unlink" eval="1"/>
+
+    </record> -->
+</odoo>

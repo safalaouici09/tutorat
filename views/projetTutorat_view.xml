@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <menuitem id="tutorat_projet_root"
+            name="Projets tutorat"
+             action="projet_template_action"
+            parent="tutorat_root"
+            sequence="10"/>
+            <record id="projet_template_action" model="ir.actions.act_window">
+            <field name="name"> Créer Projets</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">tutorat.projet</field>
+            <field name="view_mode">kanban,tree,form</field>
+             <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Projets de tutorat 
+                </p>
+            </field>
+        </record>
+        
+          <record id="projets_tree" model="ir.ui.view">
+            <field name="name">tutorat.projet.tree</field>
+            <field name="model">tutorat.projet</field>
+             <field name="arch" type="xml">
+                <tree>
+                  <field name="idProjet"/>
+                  <field name="descProjet"/>
+
+                  
+                 
+                </tree>
+            </field>
+        </record>
+     
+         <record id="projets_form" model="ir.ui.view">
+            <field name="name">tutorat.projet.form</field>
+            <field name="model">tutorat.projet</field>
+             <field name="arch" type="xml">
+                <form>
+                 <sheet>
+                <group>
+                  <field name="idProjet"/>  
+                  <field name="descProjet"/>  
+                  <field name="idEns"/>
+                  <field name="titre"/>
+                </group>
+                </sheet>
+                </form>
+            </field>
+
+        </record>
+        
+
+
+</odoo>
+            

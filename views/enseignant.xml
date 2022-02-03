@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+        <!-- Top menu item -->
+        
+        <menuitem id="tutorat.enseignants_root"
+            name="Enseignants"
+            action="enseignant_action"
+            parent="tutorat_root"
+            sequence="10"/>
+        <record id="enseignants_tree" model="ir.ui.view">
+            <field name="name">tutorat.enseignant.tree</field>
+            <field name="model">tutorat.enseignant</field>
+             <field name="arch" type="xml">
+                <tree>
+                  <field name="idEns"/>
+                  <field name="nomEns"/>
+                  <field name="prenomEns"/>
+                </tree>
+            </field>
+        </record>
+                        <record id="enseignants_form" model="ir.ui.view">
+            <field name="name">tutorat.enseignant.form</field>
+            <field name="model">tutorat.enseignant</field>
+             <field name="arch" type="xml">
+        
+                <form>
+                <sheet>
+                <group>
+                  <field name="idEns"/>  
+                  <field name="nomEns"/> 
+                  <field name="prenomEns"/>   
+                </group>
+                </sheet>
+                  
+                </form>
+            </field>
+        </record>
+        <record id="enseignant_action" model="ir.actions.act_window">
+            <field name="name">Enseignants</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">tutorat.enseignant</field>
+            <field name="view_mode">kanban,tree,form</field>
+             <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Creer enseignants
+                </p>
+            </field>
+        </record>
+    
+</odoo>

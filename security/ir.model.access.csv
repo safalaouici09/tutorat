@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_tutorat_etudiant,tutorat.etudiant,model_tutorat_demande,,1,1,1,1
+access_tutorat_respoDE,tutorat.respoDE,model_tutorat_demande,,1,1,1,1
+access_tutorat_enseignant,tutorat.enseignant,model_tutorat_demande,,1,1,1,1

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+        <!-- Top menu item -->
+        <menuitem id="tutorat_root"
+            name="Tutorat"
+            sequence="10"/>
+        <menuitem id="tutorat_demandes_root"
+            name="Demandes tutorat"
+            action="demandes_action"
+            parent="tutorat_root"
+            sequence="10"/>
+       
+
+        <record id="demandes_tree" model="ir.ui.view">
+            <field name="name">tutorat.demande.tree</field>
+            <field name="model">tutorat.demande</field>
+             <field name="arch" type="xml">
+             
+                <tree>
+                  <field name="titre"/>
+                  <field name="date"/>
+                  <field name="etat"/>
+
+                </tree>
+            </field>
+        </record>
+                        <record id="demandes_form" model="ir.ui.view">
+            <field name="name">tutorat.demande.form</field>
+            <field name="model">tutorat.demande</field>
+             <field name="arch" type="xml">
+             <header>
+             <button name="action_confirm" string="valider la demande" class="btn-primary" type="object"/>
+             </header>
+                <form>
+                <sheet>
+                <group>
+                  <field name="titre"/>  
+                  <field name="desDemande"/>  
+                </group>
+                </sheet>
+                  
+                </form>
+            </field>
+        </record>
+        <record id="demandes_action" model="ir.actions.act_window">
+            <field name="name">Demandes</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">tutorat.demande</field>
+            <field name="view_mode">kanban,tree,form</field>
+             <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Creer une nouvelle demande de tutorat 
+                </p>
+            </field>
+        </record>
+    
+</odoo>
