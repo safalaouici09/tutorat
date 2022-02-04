@@ -31,8 +31,8 @@
         'security/security.xml',
         'security/ir.model.access.csv',
         'views/projetTutorat_view.xml',
-        
-	    #'reports.xml',
+	    'reports/report.xml',
+     'reports/etudiants_template.xml'
     ],
 
     # only loaded in demonstration mode

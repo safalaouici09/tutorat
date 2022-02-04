@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="report_rapport_Etudiants">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                 <t t-call="web.external_layout">
+                  <table border="1" style="width:100%;"> 
+                 <tr style="font-weight:bold;">
+                  <td><h4>Nom</h4></td>
+                  <td><h4>Prenom</h4></td>
+                  <td><h4>Email</h4></td>
+                </tr>
+  <tr>
+    <td><t t-esc="o.nomEt"/></td>
+    <td><t t-esc="o.prenomEt"/></td>	
+  </tr>
+                </t>
+            </t>
+        </t>
+    </template>
+
+</odoo>
