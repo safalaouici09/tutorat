@@ -21,11 +21,13 @@
                   <field name="titre"/>
                   <field name="date"/>
                   <field name="etat"/>
+                  <field name="etudiantid"/>
+                  
 
                 </tree>
             </field>
         </record>
-                        <record id="demandes_form" model="ir.ui.view">
+          <record id="demandes_form" model="ir.ui.view">
             <field name="name">tutorat.demande.form</field>
             <field name="model">tutorat.demande</field>
              <field name="arch" type="xml">
@@ -34,6 +36,12 @@
              </header>
                 <form>
                 <sheet>
+                <group>
+                
+                <field name="idEt"/>  
+                <field name="nomEt"/>  
+                <field name="prenomEt"/>  
+                </group>
                 <group>
                   <field name="titre"/>  
                   <field name="desDemande"/>  
