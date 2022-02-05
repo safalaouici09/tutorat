@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<template id="tutorat.Rapport_projet">
+        <t t-call="web.html_container">
+         <t t-call="web.external_layout">
+         <style>
+         * {
+
+text-align: center;
+}
+         </style>
+       <h1>Projet tutorat </h1> 
+            
+           <table style=" width : 80% ;  border: 2 px solid black;">
+                    
+  
+  
+    
+   <tbody style="display: table-row-group">
+     <t t-foreach="docs" t-as="o">
+   <td>
+   
+  <tr > <h4>Titre : <t t-esc="o.idProjet"/></h4></tr>
+    <tr> <h4>Description : <t t-esc="o.descProjet"/></h4></tr>
+      <tr> <h4>Délai : <t t-esc="o.delai"/></h4></tr>
+  
+  </td>
+  </t>
+  </tbody> 
+                   
+                      
+                      </table>
+  
+               
+                 </t> 
+                   </t> 
+                  
+            
+        <!--/t-->
+    </template>
+
+
+    <template id="tutorat.rapport_Etudiants">
+        <t t-call="web.html_container">
+         <t t-call="web.external_layout">
+       <h1>Liste des étudiants demandants des tutorats </h1> 
+            
+                 <!--t t-call="web.external_layout"-->
+                  <style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+table.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+                     <table style=" width : 80% ;  border: 1px solid black;
+  border-collapse: collapse;">
+                     <thead style="display: table-row-group">
+  <tr>
+    <th>Matricule</th>
+    <th>Nom</th>
+    <th>Prenom</th>
+  </tr>
+  
+    </thead>
+   <tbody>
+     <t t-foreach="docs" t-as="o">
+   <tr>
+   
+  <td > <t t-esc="o.idEt"/></td>
+    <td> <t t-esc="o.nomEt"/></td>
+      <td> <t t-esc="o.prenomEt"/></td>
+  
+  </tr>
+  </t>
+  </tbody> 
+                   
+                      
+                      </table>
+  
+               
+                 </t> 
+                   </t> 
+                  
+            
+        <!--/t-->
+    </template>
+
+
+
+</odoo>

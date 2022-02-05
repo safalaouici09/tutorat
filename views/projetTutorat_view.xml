@@ -42,6 +42,12 @@
                   <field name="descProjet"/>  
                   <field name="idEns"/>
                   <field name="titre"/>
+                  <field name="delai"/>
+                  
+
+                 
+                  
+                  
                 </group>
                 </sheet>
                 </form>

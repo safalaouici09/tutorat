@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <record id="report_Etudiants" model="ir.actions.report">
+        <field name="name">Rapport des Etudiants</field>
+        <field name="model">tutorat.demande</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">tutorat.rapport_Etudiants</field>
+        <field name="report_file">tutorat.rapport_Etudiants</field>
+        <field name="binding_model_id" ref="model_tutorat_demande"/>
+        <field name="binding_type">report</field>
+    </record>
+        <record id="Rapport_projet" model="ir.actions.report">
+        <field name="name">Rapport projet</field>
+        <field name="model">tutorat.projet</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">tutorat.Rapport_projet</field>
+        <field name="report_file">tutorat.Rapport_projet</field>
+        <field name="binding_model_id" ref="model_tutorat_projet"/>
+        <field name="binding_type">report</field>
+    </record>
+
+ 
+
+</odoo>

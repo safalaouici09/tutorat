@@ -41,6 +41,7 @@
                 <field name="idEt"/>  
                 <field name="nomEt"/>  
                 <field name="prenomEt"/>  
+
                 </group>
                 <group>
                   <field name="titre"/>  
